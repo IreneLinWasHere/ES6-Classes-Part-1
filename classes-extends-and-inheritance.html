@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes: Extends/Inheritance - JavaScript</title>
+</head>
+<body>
+    <h2 id="'title">Classes: Extends/Inheritance</h2>
+
+    <script type="text/javascript">
+        //Parent and Child Class
+        class Person {
+            constructor(_name, _age) {
+                this.name = _name
+                this.age = _age
+            }
+
+            describe() {
+                console.log(`I am ${name} and I am ${age} years old`)
+            }
+        }
+
+        class Programmer extends Person {
+            constructor(_name, _age, _yearsOfExperience) {
+                super(_name, _age)
+
+                //Custom Behavior
+                this.yearsOfExperience = _yearsOfExperience
+            }
+
+            code() {
+                console.log(`${this.name} is coding`)
+            }
+        }
+
+        let person1 = new Person('Jeff', 45)
+        let programmer1 = new Programmer('Dom', 56, 12)
+
+       const programmers = [
+            new Programmer('Dom', 56, 12),
+            new Programmer('Jeff', 24, 4)
+       ]
+
+        function developSoftware (programmers) {
+            //Develop Software
+            for (let programmer of programmers){
+                programmer.code()
+            }
+        }
+
+        developSoftware(programmers)
+    </script>
+</body>
+</html>

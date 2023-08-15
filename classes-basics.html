@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="title">Classes: The Basics</h2>
+
+    <script type="text/javascript">
+        /*
+            Class -> Object 
+
+            Instance Porperties: what they have
+                -name
+                -age
+                -height
+
+            Instance Methods: what they do
+                -talk
+                -run
+                -jump
+        */
+
+        class Rectangle {
+            //Setup
+            constructor(_width, _height, _color) {
+                console.log('The Rectangle is being created!')
+
+                this.width = _width
+                this.height = _height
+                this.color = _color
+            }
+
+            getArea() {
+                return this.width * this.height
+            }
+
+            printDescription() {
+                console.log(`I am a rectangle of ${this.width} x ${this.height} and I am ${this.color}`)
+            }
+        }
+
+        let myRectangle1 = new Rectangle(5, 3, 'blue')
+        let myRectangle2 = new Rectangle(10, 5, 'red')
+
+        console.log(myRectangle1.getArea())
+        console.log(myRectangle2.getArea())
+        console.log(myRectangle2.printDescription())
+    </script>
+</body>
+</html>

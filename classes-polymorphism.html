@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes: Polymorphism - JavaScript</title>
+</head>
+<body>
+    <h2 id="title">Classes: Polymorphism</h2>
+
+    <script type="text/javascript">
+        class Animal {
+            constructor(name) {
+                this.name = name
+            }
+
+            makeSound() {
+                console.log('Generic animal sound!!')
+            }
+        }
+
+        class Dog extends Animal {
+            constructor(name) {
+                super(name)
+            }
+
+            makeSound() {
+                super.makeSound()
+                console.log('Woof woof')
+            }
+        }
+
+        const a1 = new Animal('Dom')
+        a1.makeSound()
+
+        const a2 = new Dog('Jeff')
+        a2.makeSound()
+
+
+
+    </script>
+</body>
+</html>
